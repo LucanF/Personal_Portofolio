@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with more distinct gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#1b263b" />
+    </linearGradient>
+    
+    <!-- Particle effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background with more contrast -->
+  <rect width="800" height="300" fill="url(#bgGradient)" rx="8" ry="8"/>
+  
+  <!-- Tech circuit pattern -->
+  <g opacity="0.9">
+    <!-- Abstract circuit traces -->
+    <path d="M 0,150 L 100,150 L 150,200 L 250,200 L 300,150 L 500,150 L 550,100 L 650,100 L 700,150 L 800,150" 
+          stroke="#3a86ff" stroke-width="1.5" fill="none" stroke-opacity="0.5"/>
+    <path d="M 0,100 L 120,100 L 170,150 L 270,150 L 320,100 L 520,100 L 570,50 L 670,50 L 720,100 L 800,100" 
+          stroke="#3a86ff" stroke-width="1" fill="none" stroke-opacity="0.3"/>
+    <path d="M 0,200 L 80,200 L 130,250 L 230,250 L 280,200 L 480,200 L 530,150 L 630,150 L 680,200 L 800,200" 
+          stroke="#3a86ff" stroke-width="1" fill="none" stroke-opacity="0.3"/>
+  </g>
+  
+  <!-- Digital accents -->
+  <g>
+    <!-- Corner accents -->
+    <path d="M 0,0 L 100,0 L 80,20 L 0,20 Z" fill="#4895ef" opacity="0.6"/>
+    <path d="M 800,300 L 700,300 L 720,280 L 800,280 Z" fill="#4895ef" opacity="0.6"/>
+    
+    <!-- Digital nodes with more prominent glow -->
+    <circle cx="120" cy="100" r="4" fill="#ff006e" filter="url(#glow)" opacity="0.9"/>
+    <circle cx="270" cy="150" r="3" fill="#3a86ff" filter="url(#glow)" opacity="0.9"/>
+    <circle cx="520" cy="100" r="4" fill="#3a86ff" filter="url(#glow)" opacity="0.9"/>
+    <circle cx="630" cy="150" r="3" fill="#ff006e" filter="url(#glow)" opacity="0.9"/>
+    
+    <!-- Connection lines with higher contrast -->
+    <line x1="120" y1="100" x2="270" y2="150" stroke="#ff006e" stroke-width="2" opacity="0.7"/>
+    <line x1="270" y1="150" x2="630" y2="150" stroke="#3a86ff" stroke-width="2" opacity="0.7"/>
+    <line x1="630" y1="150" x2="520" y2="100" stroke="#ff006e" stroke-width="2" opacity="0.7"/>
+    <line x1="520" y1="100" x2="120" y2="100" stroke="#3a86ff" stroke-width="2" opacity="0.7"/>
+  </g>
+  
+  <!-- More visible code brackets -->
+  <path d="M 40,60 L 20,150 L 40,240" stroke="#8ecae6" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M 760,60 L 780,150 L 760,240" stroke="#8ecae6" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- Subtle grid overlay -->
+  <g opacity="0.1">
+    <line x1="0" y1="75" x2="800" y2="75" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="0" y1="225" x2="800" y2="225" stroke="#ffffff" stroke-width="0.5"/>
+    
+    <line x1="200" y1="0" x2="200" y2="300" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="300" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+</svg>
