@@ -31,14 +31,36 @@ body::before {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 20px auto;
   width: 95%;
+  max-width: 800px; /* Reduced max-width for just two cards */
   padding: 15px;
   gap: 30px;
-  margin-left: 20px;
 }
 
+.github-disclaimer {
+  text-align: center;
+  margin: 30px auto;
+  padding: 15px;
+  color: #87CEEB;
+  font-family: "Fjalla One", sans-serif;
+  max-width: 800px;
+  border-top: 1px solid rgba(135, 206, 235, 0.3);
+  padding-top: 30px;
+}
+
+.github-disclaimer a {
+  color: #87CEEB;
+  text-decoration: none;
+  border-bottom: 1px dashed #87CEEB;
+  transition: all 0.3s ease;
+}
+
+.github-disclaimer a:hover {
+  color: white;
+  border-bottom-color: white;
+}
 .project-card1, .project-card2, .project-card3 {
   background-color: #222;
   border: 1px solid #87CEEB;
@@ -329,3 +351,4 @@ h3 {
       display: none; 
   }
 }
+
